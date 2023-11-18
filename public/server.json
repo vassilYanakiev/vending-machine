@@ -1,0 +1,87 @@
+[
+  {
+    "productId": 1,
+    "count": 10,
+    "category": "Fruit",
+    "price": 0.5,
+    "productName": "Apple"
+  },
+
+  {
+    "productId": 2,
+    "count": 12,
+    "category": "Fruit",
+    "price": 0.6,
+    "productName": "Banana"
+  },
+  {
+    "productId": 3,
+    "count": 8,
+    "category": "Fruit",
+    "price": 0.75,
+    "productName": "Orange"
+  },
+  {
+    "productId": 4,
+    "count": 15,
+    "category": "Vegetable",
+    "price": 0.8,
+    "productName": "Carrot"
+  },
+  {
+    "productId": 5,
+    "count": 10,
+    "category": "Vegetable",
+    "price": 0.7,
+    "productName": "Cucumber"
+  },
+  {
+    "productId": 6,
+    "count": 12,
+    "category": "Nuts",
+    "price": 1.0,
+    "productName": "Almonds"
+  },
+  {
+    "productId": 7,
+    "count": 10,
+    "category": "Nuts",
+    "price": 0.9,
+    "productName": "Walnuts"
+  },
+  {
+    "productId": 8,
+    "count": 12,
+    "category": "Dried Fruits",
+    "price": 1.2,
+    "productName": "Dried Mango"
+  },
+  {
+    "productId": 9,
+    "count": 15,
+    "category": "Dried Fruits",
+    "price": 1.5,
+    "productName": "Dried Apricots"
+  },
+  {
+    "productId": 10,
+    "count": 10,
+    "category": "Granola Bars",
+    "price": 1.25,
+    "productName": "Oat and Honey Bar"
+  },
+  {
+    "productId": 11,
+    "count": 12,
+    "category": "Granola Bars",
+    "price": 1.3,
+    "productName": "Mixed Berry Bar"
+  },
+  {
+    "productId": 12,
+    "count": 8,
+    "category": "Yogurt",
+    "price": 1.5,
+    "productName": "Greek Yogurt Cup"
+  }
+]

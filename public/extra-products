@@ -1,0 +1,86 @@
+[
+  {
+    "productId": 13,
+    "count": 10,
+    "category": "Yogurt",
+    "price": 1.75,
+    "productName": "Strawberry Yogurt Parfait"
+  },
+  {
+    "productId": 14,
+    "count": 12,
+    "category": "Smoothies",
+    "price": 2,
+    "productName": "Berry Blast Smoothie"
+  },
+  {
+    "productId": 15,
+    "count": 8,
+    "category": "Smoothies",
+    "price": 1.9,
+    "productName": "Green Goodness Smoothie"
+  },
+  {
+    "productId": 16,
+    "count": 10,
+    "category": "Protein Bars",
+    "price": 2.25,
+    "productName": "Chocolate Protein Bar"
+  },
+  {
+    "productId": 17,
+    "count": 15,
+    "category": "Protein Bars",
+    "price": 2.5,
+    "productName": "Peanut Butter Protein Bar"
+  },
+  {
+    "productId": 18,
+    "count": 12,
+    "category": "Hummus Snack Packs",
+    "price": 1.75,
+    "productName": "Roasted Red Pepper Hummus"
+  },
+  {
+    "productId": 19,
+    "count": 10,
+    "category": "Hummus Snack Packs",
+    "price": 2,
+    "productName": "Classic Hummus"
+  },
+  {
+    "productId": 20,
+    "count": 8,
+    "category": "Kale Chips",
+    "price": 1.5,
+    "productName": "Sea Salt Kale Chips"
+  },
+  {
+    "productId": 21,
+    "count": 12,
+    "category": "Kale Chips",
+    "price": 1.75,
+    "productName": "Spicy Sriracha Kale Chips"
+  },
+  {
+    "productId": 22,
+    "count": 10,
+    "category": "Coconut Water",
+    "price": 1.5,
+    "productName": "Natural Coconut Water"
+  },
+  {
+    "productId": 23,
+    "count": 15,
+    "category": "Coconut Water",
+    "price": 2,
+    "productName": "Coconut Flavored  Water"
+  },
+  {
+    "productId": 24,
+    "count": 8,
+    "category": "Mixed Berries Cup",
+    "price": 2.5,
+    "productName": "Mixed Berry Delight"
+  }
+]
