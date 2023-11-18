@@ -7,8 +7,9 @@ export type Product = {
   image?: string;
 };
 
-type ACTIONTYPE =
+export type ACTIONTYPE =
   | { type: "SET_PRODUCTS"; payload: Product[] }
+  | { type: "PURCHASE"; payload: Product }
   | { type: "UPDATE_PRODUCTS"; payload: string }
   | { type: "CANCEL_ORDER" };
 
@@ -27,6 +28,10 @@ export const reducer = (state: State, action: ACTIONTYPE): State => {
       return {
         ...state,
         products: action.payload,
+      };
+    case "PURCHASE":
+      return {
+        ...state,
       };
     case "UPDATE_PRODUCTS":
       return {

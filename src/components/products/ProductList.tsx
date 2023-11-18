@@ -1,16 +1,16 @@
+import { useContext } from "react";
 import { Product } from "../../reducer";
 import ProductItem from "./ProductItem";
+import VendingContextType from "../../VendingContext";
 
-interface ProductListProps {
-  products: Product[];
-}
-
-const ProductList = ({ products }: ProductListProps) => {
-  // const { products } = useContext(VendingMachineContext);
+const ProductList = () => {
+  const {
+    state: { products },
+  } = useContext(VendingContextType);
 
   return (
     <div className="ProductList">
-      {products.map((product: Product) => (
+      {products?.map((product: Product) => (
         <ProductItem key={product.productId} product={product} />
       ))}
     </div>

@@ -2,6 +2,7 @@ import { useReducer, useEffect } from "react";
 import ProductList from "./components/products/ProductList";
 import Dispenser from "./components/dispenser/Dispenser";
 import CoinInput from "./components/coins/Coins";
+import VendingContext from "./VendingContext";
 import "./VendingMachine.scss";
 import { reducer, initialState } from "./reducer";
 
@@ -33,15 +34,20 @@ function VendingMachine() {
   }
 
   return (
-    <>
+    <VendingContext.Provider
+      value={{
+        state,
+        dispatch,
+      }}
+    >
       <div className="VendingMachine">
         <div className="MainContent ">
-          <ProductList products={state.products} />
+          <ProductList />
           <Dispenser />
         </div>
         <CoinInput />
       </div>
-    </>
+    </VendingContext.Provider>
   );
 }
 
