@@ -18,7 +18,7 @@
     "count": 8,
     "category": "Smoothies",
     "price": 1.9,
-    "productName": "Green Goodness Smoothie"
+    "productName": "Green Smoothie"
   },
   {
     "productId": 16,
@@ -60,7 +60,7 @@
     "count": 12,
     "category": "Kale Chips",
     "price": 1.75,
-    "productName": "Spicy Sriracha Kale Chips"
+    "productName": "Spicy Kale Chips"
   },
   {
     "productId": 22,

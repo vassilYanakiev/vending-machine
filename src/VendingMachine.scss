@@ -1,7 +1,5 @@
 .VendingMachine {
-  min-width: 800px;
   display: flex;
-  height: 85vh;
   padding: 20px;
   box-sizing: border-box;
 
@@ -22,7 +20,6 @@
     }
 
     .Display {
-      width: 100%;
       height: 60px;
       display: flex;
       justify-content: center;
@@ -39,10 +36,11 @@
       align-items: center;
       border: 1px solid white;
     }
+    
   }
 
-  .CoinInput {
-    width: 320px;
+  .Pannel {
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,7 +1,7 @@
 import { useReducer, useEffect } from "react";
 import ProductList from "./components/products/ProductList";
 import Dispenser from "./components/dispenser/Dispenser";
-import CoinInput from "./components/coins/Coins";
+import CoinInput from "./components/pannel/Pannel";
 import VendingContext from "./VendingContext";
 import "./VendingMachine.scss";
 import { reducer, initialState } from "./reducer";
