@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import VendingContextType from "../../VendingContext";
+import { VendingContext, VendingDispatchContext } from "../../VendingContext";
 import "./Pannel-styling.scss";
 
 const Selector = ({
@@ -12,9 +12,8 @@ const Selector = ({
   const [selection, setSelection] = useState<number | null>(null);
   const {
     state: { products },
-    dispatch,
-  } = useContext(VendingContextType);
-
+  } = useContext(VendingContext);
+  const { dispatch } = useContext(VendingDispatchContext);
   const selectedProduct =
     products?.find((product) => product.productId === selection) || null;
 

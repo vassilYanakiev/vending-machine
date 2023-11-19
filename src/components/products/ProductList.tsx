@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { Product } from "../../reducer";
 import ProductItem from "./ProductItem";
-import VendingContextType from "../../VendingContext";
+import { VendingContext } from "../../VendingContext";
 
 const ProductList = () => {
   const {
     state: { products },
-  } = useContext(VendingContextType);
+  } = useContext(VendingContext);
 
   return (
     <div className="ProductList">

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import VendingContext from "../../VendingContext";
+import { VendingContext } from "../../VendingContext";
 
 const Dispenser = () => {
   const { state } = useContext(VendingContext);

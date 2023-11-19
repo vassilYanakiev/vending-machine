@@ -30,10 +30,10 @@
   },
   {
     "productId": 5,
-    "count": 10,
-    "category": "Vegetable",
-    "price": 0.7,
-    "productName": "Cucumber"
+    "count": 2,
+    "category": "Smoothies",
+    "price": 2,
+    "productName": "Berry Smoothie"
   },
   {
     "productId": 6,

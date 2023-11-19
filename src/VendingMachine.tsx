@@ -2,7 +2,7 @@ import { useReducer, useEffect } from "react";
 import ProductList from "./components/products/ProductList";
 import Dispenser from "./components/dispenser/Dispenser";
 import CoinInput from "./components/pannel/Pannel";
-import VendingContext from "./VendingContext";
+import { VendingContext, VendingDispatchContext } from "./VendingContext";
 import "./VendingMachine.scss";
 import { reducer, initialState } from "./reducer";
 
@@ -10,43 +10,41 @@ function VendingMachine() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    fetch("/server.json")
-      .then((resp) => resp.json())
-      .then((payload) => {
-        console.log(
-          "🚀 ~ file: VendingMachine.tsx:15 ~ .then ~ payload:",
-          payload
-        );
-
-        dispatch({
-          type: "FETCH_PRODUCTS",
-          payload,
+    try {
+      fetch("/server.json")
+        .then((resp) => {
+          if (!resp.ok) {
+            throw new Error("HTTP error " + resp.status);
+          }
+          return resp.json();
+        })
+        .then((payload) => {
+          dispatch({
+            type: "FETCH_PRODUCTS",
+            payload,
+          });
         });
-      });
-
-    return () => {
-      console.log("cleanup");
-    };
+    } catch (error) {
+      console.log(error);
+      throw new Error("Error fetching products");
+    }
   }, []);
-
-  if (!state.products) {
-    return <div>Loading products</div>;
-  }
 
   return (
     <VendingContext.Provider
       value={{
         state,
-        dispatch,
       }}
     >
-      <div className="VendingMachine">
-        <div className="MainContent ">
-          <ProductList />
-          <Dispenser />
+      <VendingDispatchContext.Provider value={{ dispatch }}>
+        <div className="VendingMachine">
+          <div className="MainContent ">
+            <ProductList />
+            <Dispenser />
+          </div>
+          <CoinInput />
         </div>
-        <CoinInput />
-      </div>
+      </VendingDispatchContext.Provider>
     </VendingContext.Provider>
   );
 }

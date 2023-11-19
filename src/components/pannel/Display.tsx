@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import VendingContextType from "../../VendingContext";
+import { VendingContext } from "../../VendingContext";
 import "./Pannel-styling.scss";
 
 const Display = ({ amount }: { amount: number }) => {
   const {
     state: { status },
-  } = useContext(VendingContextType);
+  } = useContext(VendingContext);
 
   return (
     <div className="Display">

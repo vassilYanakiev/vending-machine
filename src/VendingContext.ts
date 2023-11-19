@@ -1,4 +1,4 @@
-import React from "react";
+import { createContext } from "react";
 import { Product, ACTIONTYPE } from "./reducer";
 
 export interface VendingContextType {
@@ -7,12 +7,15 @@ export interface VendingContextType {
     purchased: Product[];
     status: string;
   };
-  dispatch: React.Dispatch<ACTIONTYPE>; // replace 'any' with the type of your actions
+}
+export interface VendingDispatchContext {
+  dispatch: React.Dispatch<ACTIONTYPE>;
 }
 
-const VendingContext = React.createContext<VendingContextType>({
+export const VendingContext = createContext<VendingContextType>({
   state: { products: [], purchased: [], status: "" },
-  dispatch: () => {},
 });
 
-export default VendingContext;
+export const VendingDispatchContext = createContext<VendingDispatchContext>({
+  dispatch: () => {},
+});
