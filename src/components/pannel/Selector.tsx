@@ -34,8 +34,8 @@ const Selector = ({
         payload: "OUT OF STOCK",
       });
     } else {
-      const newAmmount = amount - price;
-      setAmount(newAmmount);
+      const newAmount = amount - price;
+      setAmount(newAmount);
       setSelection(null);
       dispatch({ type: "PURCHASE", payload: selection as number });
       dispatch({

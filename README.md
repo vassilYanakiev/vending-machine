@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
+# Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+We would like to ask you to implement a vending machine with the following requirements:
+-	Inventory size – up to 15 products of the same type
+-	Price of products – should be different for each type
+-	Use a currency of your choice, but please note the accepted coin denominations in a readme file. Make sure your vending machine accepts only the selected denominations
+-	The machine must return change
+-	Web Design: responsive
+Operations to be implemented:
+-	Products - Get initial products list data from external resource (mocked API created by you)
+-	CRUD operations for the products only in the application state (products data is not needed to be updated in the external resource)
+-	Vending – Insert coins, buy product, reset process (return the coins without purchase)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Start project
 
-## Expanding the ESLint configuration
+ - Clone the project
+  - Run `npm install`
+  - Run `npm run dev`
+  - Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Run tests
 
-- Configure the top-level `parserOptions` property like this:
+ - Run `npm test`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
