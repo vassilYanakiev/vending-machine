@@ -34,12 +34,15 @@ const Selector = ({
         payload: "OUT OF STOCK",
       });
     } else {
-      setAmount(0);
+      const newAmmount = amount - price;
+      setAmount(newAmmount);
       setSelection(null);
       dispatch({ type: "PURCHASE", payload: selection as number });
       dispatch({
         type: "SET_STATUS",
-        payload: `YOUR CHANGE IS ${(amount * 10 - price * 10) / 10}`,
+        payload: `YOUR CREDIT IS ${((amount * 10 - price * 10) / 10).toFixed(
+          2
+        )}`,
       });
     }
     setTimeout(() => {
@@ -51,12 +54,12 @@ const Selector = ({
   };
 
   const handleReset = () => {
+    setAmount(0);
+    setSelection(null);
     dispatch({
       type: "SET_STATUS",
       payload: `YOUR CHANGE IS ${amount}`,
     });
-    setAmount(0);
-    setSelection(null);
     setTimeout(() => {
       dispatch({
         type: "SET_STATUS",
@@ -84,7 +87,7 @@ const Selector = ({
           BUY
         </button>
       </form>
-      <button className="Reset" onClick={handleReset}>
+      <button disabled={!amount} className="Reset" onClick={handleReset}>
         Reset
       </button>
     </>
