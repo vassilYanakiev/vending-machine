@@ -19,7 +19,7 @@ function VendingMachine() {
         );
 
         dispatch({
-          type: "SET_PRODUCTS",
+          type: "FETCH_PRODUCTS",
           payload,
         });
       });

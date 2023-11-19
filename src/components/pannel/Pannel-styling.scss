@@ -27,7 +27,8 @@
 .Display {
   background-color: rgb(143, 187, 188);
   width: 190px;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: bold;
   min-height: 20vh;
   display: flex;
   flex-direction: column;
@@ -35,6 +36,7 @@
   align-items: center;
   margin-bottom: 20px;
   border: 1px solid white;
+  color: rgb(42, 25, 25);
 }
 
 .Selector {
@@ -57,8 +59,26 @@
 }
 
 .Selector button {
-  background-color: rgb(0, 94, 255);
+  background-color: rgb(0, 140, 255);
   width: 80px;
   height: 30px;
   margin-bottom: 10px;
+  &:hover {
+    background-color: rgb(43, 122, 186); 
+    cursor: pointer;
+  }
+  &:active {
+    background-color: rgb(0, 104, 186); 
+  }
+}
+
+.Reset {
+  background-color: rgb(106, 10, 82);
+  width: 80px;
+  height: 30px;
+  margin-bottom: 10px;
+  &:hover {
+    background-color: rgb(186, 43, 117); 
+    cursor: pointer;
+  }
 }

@@ -1,7 +1,7 @@
 [
   {
     "productId": 1,
-    "count": 10,
+    "count": 1,
     "category": "Fruit",
     "price": 0.5,
     "productName": "Apple"

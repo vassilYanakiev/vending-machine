@@ -13,9 +13,8 @@ const Pannel = () => {
   return (
     <div className="Pannel">
       <Coins handleAddCoin={handleAddCoin} />
-      <Selector />
       <Display amount={amount} />
-      <button>Reset</button>
+      <Selector amount={amount} setAmount={setAmount} />
     </div>
   );
 };

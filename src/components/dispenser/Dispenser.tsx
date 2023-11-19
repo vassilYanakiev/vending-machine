@@ -1,14 +1,16 @@
+import { useContext } from "react";
+import VendingContext from "../../VendingContext";
+
 const Dispenser = () => {
-  // const { state, dispatch } = useContext(VendingMachineContext);
+  const { state } = useContext(VendingContext);
 
   return (
     <div className="Dispenser">
-      <button
-        className="Dispenser__button"
-        // onClick={() => dispatch({ type: "RESET" })}
-      >
-        Collect items
-      </button>
+      {state.purchased.map(({ productId, productName }) => (
+        <div key={productId} className="product">
+          {productName}
+        </div>
+      ))}
     </div>
   );
 };

@@ -21,12 +21,18 @@
 
     
     .Dispenser {
-      flex: none;
-      height: 100px;
+      flex: 1;
+      flex-wrap: wrap;
+      min-height: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
       border: 1px solid white;
+
+      .product {
+        border: 1px solid white;
+        margin: 0 10px;
+      }
     }
     
   }
