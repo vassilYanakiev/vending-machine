@@ -8,7 +8,13 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Header />
-    <ErrorBoundary>
+    <ErrorBoundary
+      fallback={
+        <div style={{ fontSize: "32px" }}>
+          This vending machine is out of order!
+        </div>
+      }
+    >
       <VendingMachine />
     </ErrorBoundary>
   </React.StrictMode>

@@ -9,7 +9,7 @@ const ProductList = () => {
   } = useContext(VendingContext);
 
   return (
-    <div className="ProductList">
+    <div className="product-list">
       {products?.map((product: Product) => (
         <ProductItem key={product.productId} product={product} />
       ))}

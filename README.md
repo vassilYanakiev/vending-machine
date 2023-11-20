@@ -23,3 +23,12 @@ Operations to be implemented:
 
  - Run `npm test`
 
+
+ ### Notes
+
+  -TODOs:
+  - Add more tests
+  - Implement Redux Toolkit to manage the global store
+  - Add more custom hooks
+  - Design improvements
+

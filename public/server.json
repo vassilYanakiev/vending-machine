@@ -78,8 +78,8 @@
     "productName": "Mixed Berry Bar"
   },
   {
-    "productId": 12,
-    "count": 8,
+    "productId": 404,
+    "count": 0,
     "category": "Yogurt",
     "price": 1.5,
     "productName": "Greek Yogurt Cup"

@@ -23,7 +23,6 @@ export const initialState = {
 type State = typeof initialState;
 
 export const reducer = (state: State, action: ACTIONTYPE): State => {
-  console.log("🚀 ~ file: reducer.tsx:80 ~ action.type", action.type);
   switch (action.type) {
     case "FETCH_PRODUCTS":
       return {

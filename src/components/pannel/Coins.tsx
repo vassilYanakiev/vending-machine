@@ -9,7 +9,7 @@ const Coins = ({ handleAddCoin }: CoinsProps) => {
 
   return (
     <>
-      <h3>Throw coins</h3>
+      <h3>Insert coins here</h3>
       <div className="Coins">
         {coinValues.map((value, index) => (
           <button

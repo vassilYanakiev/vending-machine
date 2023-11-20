@@ -1,4 +1,4 @@
-import { useReducer, useEffect } from "react";
+import { useReducer, useEffect, useState } from "react";
 import ProductList from "./components/products/ProductList";
 import Dispenser from "./components/dispenser/Dispenser";
 import CoinInput from "./components/pannel/Pannel";
@@ -8,27 +8,31 @@ import { reducer, initialState } from "./reducer";
 
 function VendingMachine() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [errorFetching, setErrorFetching] = useState(false);
 
   useEffect(() => {
-    try {
-      fetch("/server.json")
-        .then((resp) => {
-          if (!resp.ok) {
-            throw new Error("HTTP error " + resp.status);
-          }
-          return resp.json();
-        })
-        .then((payload) => {
-          dispatch({
-            type: "FETCH_PRODUCTS",
-            payload,
-          });
+    fetch("/server.json")
+      .then((resp) => {
+        if (!resp.ok) {
+          throw new Error("HTTP error " + resp.status);
+        }
+        return resp.json();
+      })
+      .then((payload) => {
+        dispatch({
+          type: "FETCH_PRODUCTS",
+          payload,
         });
-    } catch (error) {
-      console.log(error);
-      throw new Error("Error fetching products");
-    }
+      })
+      .catch((error) => {
+        console.log(error);
+        setErrorFetching(true);
+      });
   }, []);
+
+  if (errorFetching) throw new Error("Error fetching products");
+  if (!state.products.length)
+    return <div>Loading products in the machine!</div>;
 
   return (
     <VendingContext.Provider
@@ -37,8 +41,8 @@ function VendingMachine() {
       }}
     >
       <VendingDispatchContext.Provider value={{ dispatch }}>
-        <div className="VendingMachine">
-          <div className="MainContent ">
+        <div className="venidng-machine">
+          <div className="main-content ">
             <ProductList />
             <Dispenser />
           </div>

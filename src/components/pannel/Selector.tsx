@@ -1,5 +1,7 @@
 import { useContext, useState } from "react";
-import { VendingContext, VendingDispatchContext } from "../../VendingContext";
+import useProducts from "../../hooks/useProducts";
+import { Product } from "../../reducer";
+import { VendingDispatchContext } from "../../VendingContext";
 import "./Pannel-styling.scss";
 
 const Selector = ({
@@ -9,11 +11,9 @@ const Selector = ({
   amount: number;
   setAmount: (value: number) => void;
 }) => {
-  const [selection, setSelection] = useState<number | null>(null);
-  const {
-    state: { products },
-  } = useContext(VendingContext);
   const { dispatch } = useContext(VendingDispatchContext);
+  const [products] = useProducts<Product>("products");
+  const [selection, setSelection] = useState<number | null>(null);
   const selectedProduct =
     products?.find((product) => product.productId === selection) || null;
 
@@ -69,13 +69,12 @@ const Selector = ({
 
   return (
     <>
-      <form className="Selector">
+      <form className="selector">
         <h3>Select your item</h3>
         <input
           type="number"
           placeholder="Product"
           min={1}
-          max={12}
           value={selection || ("" as unknown as number)}
           onChange={(e) => setSelection(parseInt(e.target.value))}
         />
@@ -86,7 +85,7 @@ const Selector = ({
           BUY
         </button>
       </form>
-      <button disabled={!amount} className="Reset" onClick={handleReset}>
+      <button disabled={!amount} className="reset" onClick={handleReset}>
         Reset
       </button>
     </>

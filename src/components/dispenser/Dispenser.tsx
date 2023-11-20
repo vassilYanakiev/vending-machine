@@ -5,13 +5,16 @@ const Dispenser = () => {
   const { state } = useContext(VendingContext);
 
   return (
-    <div className="Dispenser">
-      {state.purchased.map(({ productId, productName }) => (
-        <div key={productId} className="product">
-          {productName}
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="dispenser-header">Dispenser</div>
+      <div className="dispenser">
+        {state.purchased.map(({ productId, productName }) => (
+          <div key={productId} className="product">
+            {productName}
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 

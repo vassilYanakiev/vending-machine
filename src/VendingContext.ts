@@ -6,6 +6,7 @@ export interface VendingContextType {
     products: Product[];
     purchased: Product[];
     status: string;
+    [key: string]: Product[] | string;
   };
 }
 export interface VendingDispatchContext {

@@ -1,6 +1,7 @@
 .card {
     position: relative;
     width: 200px;
+    height: 160px;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 16px;
@@ -25,13 +26,14 @@
   .card .productId {
     position: absolute;
     padding: 2px 8px;
+    width: 24px;
     top: 0; 
     right: 0; 
     font-size: 18px;
     font-weight: bold;
-    margin: 4px;
+    margin: 2px;
     color: rgb(0, 217, 255);
-    border: 1px solid rgb(0, 217, 255)
+    border: 2px solid rgb(0, 217, 255)
   }
 
   .card .category {

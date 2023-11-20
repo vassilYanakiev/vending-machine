@@ -1,48 +1,62 @@
-.VendingMachine {
+.venidng-machine {
   display: flex;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
 
-  .MainContent {
-    flex: 1;
+  .main-content {
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-content: space-evenly;
 
-    .ProductList {
-      flex: 1;
+    .product-list {
+      flex: 3;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      justify-items: center;
       align-items: center;
       margin-bottom: 20px;
       border: 1px solid white;
     }
 
     
-    .Dispenser {
+    .dispenser {
       flex: 1;
       flex-wrap: wrap;
-      min-height: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
       border: 1px solid white;
+      z-index: -1;
 
       .product {
-        border: 1px solid white;
+        border: 2px solid rgb(145, 110, 110);
+        border-radius: 5px;
+        padding: 2px;
+        color: rgb(108, 108, 155);
         margin: 0 10px;
       }
     }
-    
+
+    .dispenser-header {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: -22px;
+      margin-left: 4px;
+      color: rgb(188, 188, 212);
+    }
   }
 
-  .Pannel {
+  .pannel {
     width: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     border: 1px solid white;
+    background-color: rgb(13, 104, 99); 
+
   }
 }

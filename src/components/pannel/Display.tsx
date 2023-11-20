@@ -8,11 +8,11 @@ const Display = ({ amount }: { amount: number }) => {
   } = useContext(VendingContext);
 
   return (
-    <div className="Display">
+    <div className="display">
       <div className="credit">
         <span>{`Credit: ${amount.toFixed(2)}`}</span>
       </div>
-      <div className="Message">
+      <div className="message">
         <span>{status}</span>
       </div>
     </div>

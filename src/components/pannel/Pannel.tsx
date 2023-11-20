@@ -11,7 +11,7 @@ const Pannel = () => {
   };
 
   return (
-    <div className="Pannel">
+    <div className="pannel">
       <Coins handleAddCoin={handleAddCoin} />
       <Display amount={amount} />
       <Selector amount={amount} setAmount={setAmount} />
