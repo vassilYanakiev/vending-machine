@@ -16,13 +16,12 @@ const Selector = ({
   const [selection, setSelection] = useState<number | null>(null);
   const selectedProduct =
     products?.find((product) => product.productId === selection) || null;
-
   const price = selectedProduct?.price || 0;
-  const amountLeft = selectedProduct?.count;
+  const amountLeft = selectedProduct?.count || 0;
 
   const handlePurchase = (e: React.FormEvent) => {
     e.preventDefault();
-    if (amount < price!) {
+    if (amount < price) {
       dispatch({
         type: "SET_STATUS",
         payload: "INSUFFICIENT CREDIT",
@@ -57,7 +56,7 @@ const Selector = ({
     setSelection(null);
     dispatch({
       type: "SET_STATUS",
-      payload: `YOUR CHANGE IS ${amount}`,
+      payload: `YOUR CHANGE IS ${amount.toFixed(2)}`,
     });
     setTimeout(() => {
       dispatch({
