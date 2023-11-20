@@ -21,14 +21,16 @@ Operations to be implemented:
 
 ## Run tests
 
- - Run `npm test`
+ - Run `npm run test`
 
 
- ### Notes
+ ## Notes
+  Accepted coin denominations: hardcoded in 'src\components\pannel\Coins.tsx' file.
+  `const coinValues = [0.05, 0.1, 0.2, 0.5, 1, 2];` and mapped to respective buttons;
 
-  -TODOs:
+  TODOs:
   - Add more tests
-  - Implement Redux Toolkit to manage the global store
+  - Implement Redux Toolkit to manage the global store and use selectors
   - Add more custom hooks
   - Design improvements
 

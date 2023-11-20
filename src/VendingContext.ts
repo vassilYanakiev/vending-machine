@@ -13,6 +13,8 @@ export interface VendingDispatchContext {
   dispatch: React.Dispatch<ACTIONTYPE>;
 }
 
+//Splitting the context into two parts, one for the state and one for the dispatch to consume independently and avoid unnecessary re-renders
+
 export const VendingContext = createContext<VendingContextType>({
   state: { products: [], purchased: [], status: "" },
 });
