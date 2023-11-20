@@ -78,6 +78,27 @@
     "productName": "Mixed Berry Bar"
   },
   {
+    "productId": 12,
+    "count": 10,
+    "category": "Yogurt",
+    "price": 1.75,
+    "productName": "Strawberry Parfait"
+  },
+  {
+    "productId": 13,
+    "count": 12,
+    "category": "Smoothies",
+    "price": 2,
+    "productName": "Berry Smoothie"
+  },
+  {
+    "productId": 14,
+    "count": 8,
+    "category": "Smoothies",
+    "price": 1.9,
+    "productName": "Green Smoothie"
+  },
+  {
     "productId": 404,
     "count": 0,
     "category": "Yogurt",

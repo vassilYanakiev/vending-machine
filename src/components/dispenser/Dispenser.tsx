@@ -8,8 +8,8 @@ const Dispenser = () => {
     <>
       <div className="dispenser-header">Dispenser</div>
       <div className="dispenser">
-        {state.purchased.map(({ productId, productName }) => (
-          <div key={productId} className="product">
+        {state.purchased.map(({ productId, productName, count }) => (
+          <div key={`${productId}-${count}`} className="product">
             {productName}
           </div>
         ))}

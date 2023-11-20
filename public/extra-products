@@ -4,7 +4,7 @@
     "count": 10,
     "category": "Yogurt",
     "price": 1.75,
-    "productName": "Strawberry Yogurt Parfait"
+    "productName": "Strawberry Parfait"
   },
   {
     "productId": 14,
@@ -25,14 +25,14 @@
     "count": 10,
     "category": "Protein Bars",
     "price": 2.25,
-    "productName": "Chocolate Protein Bar"
+    "productName": "Chocolate Bar"
   },
   {
     "productId": 17,
     "count": 15,
     "category": "Protein Bars",
     "price": 2.5,
-    "productName": "Peanut Butter Protein Bar"
+    "productName": "Peanut Butter Bar"
   },
   {
     "productId": 18,

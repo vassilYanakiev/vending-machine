@@ -1,11 +1,7 @@
 import "./Header.scss";
 
 const Header = () => {
-  return (
-    <div className="Header">
-      <h1>My Healthy Vending Machine</h1>
-    </div>
-  );
+  return <div className="Header">My Healthy Vending Machine</div>;
 };
 
 export default Header;

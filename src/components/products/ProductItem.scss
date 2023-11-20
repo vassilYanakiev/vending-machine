@@ -1,14 +1,14 @@
 .card {
     position: relative;
-    width: 200px;
-    height: 160px;
+    width: 150px;
+    height: 130px;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 16px;
     margin: 16px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     background-color: rgb(82, 93, 95);
   }
 
@@ -43,5 +43,6 @@
   
   .card .price {
     font-size: 18px;
+    font-weight: bold;
     color: #a79292;
   }
